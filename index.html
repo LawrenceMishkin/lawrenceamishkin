@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Personal Website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" conetent="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="" type="image/x-icon">
+    </head>
+    <body>
+        <div id="loading">
+            <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+<span class="sr-only">Loading...</span>
+          </div>
+
+          <div id="nav-bar" class="nav-bar">
+            <img id="compa-image" class="compa-image" href="">
+            <div id="scrollmenu" class="scrollmenu">
+            <a href="#home"><button id="home" class="home"><i class="fa fa-home" aria-hidden="true"></i> Home</button></a>
+                <a href="#about"><button id="about" class="about"><i class="fa fa-info-circle" aria-hidden="true"></i> About</button></a>
+                <a href="#project"><button id="project" class="project"><i class="fa fa-laptop" aria-hidden="true"></i> Projects</button></a>
+                <a href="#lang-exp"><button id="lang-exp" class="lang-exp"><i class="fa fa-code" aria-hidden="true"></i> Lang. Experience</button></a>
+                <a href="#lang-exp"><button id="lang-exp" class="lang-exp1"><i class="fa fa-code" aria-hidden="true"></i> Lang. Experience</button></a>
+            </div>
+            <button id="slideLeft" class="left" type="button">❮</button>
+            <button id="slideRight" class="right" type="button">❯</button>
+
+            <div id="search" class="search">
+            <form type="submit">
+                <p id="search-icon" class="search-icon">&#9906</p>
+                <input type="search" placeholder="Search the Website...">
+            </form>
+            </div>
+            <a href="login.php"><button id="log-in" class="log-in"><i class="fa fa-sign-in" aria-hidden="true"></i> Log In</button></a>
+           <a href="signup.html"><button id="sign-up" class="sign-up"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</button></a>
+        </div>
+        <script>
+             /*$(window).on('load', function() {
+  $('#loading').hide();
+});*/
+// Show the loading icon
+function showLoadingIcon() {
+  document.getElementById("loading").style.display = "block";
+}
+
+// Hide the loading icon
+function hideLoadingIcon() {
+  document.getElementById("loading").style.display = "none";
+}
+
+// Call the showLoadingIcon function when the page starts loading
+window.addEventListener("load", showLoadingIcon);
+
+// Call the hideLoadingIcon function when the page finishes loading
+window.addEventListener("load", hideLoadingIcon);
+
+window.addEventListener('scroll', (e) =>{
+          const nav = document.querySelector('.nav-bar');
+          if(window.pageYOffset>0) {
+          nav.classList.add('add-shadow');
+
+          }else{
+          nav.classList.remove('add-shadow');
+          }
+      });
+      window.addEventListener('scroll', (e) =>{
+          const nav = document.querySelector('.nav-bar');
+          if(window.pageYOffset>0) {
+          nav.classList.add('add-nav');
+
+          }else{
+          nav.classList.remove('add-nav');
+          }
+      });
+      window.addEventListener('scroll', (e) =>{
+          const nav = document.querySelector('.compa-name');
+          if(window.pageYOffset>0) {
+          nav.classList.add('add-name');
+
+          }else{
+          nav.classList.remove('add-name');
+          }
+      });
+            //this is where the lines stop and the b.s. begins
+      window.addEventListener('scroll', (e) =>{
+          const nav = document.querySelector('.home');
+          if(window.pageYOffset>0) {
+          nav.classList.add('add-home');
+
+          }else{
+          nav.classList.remove('add-home');
+          }
+      });
+      window.addEventListener('scroll', (e) =>{
+          const nav = document.querySelector('.about');
+          if(window.pageYOffset>0) {
+          nav.classList.add('add-about');
+
+          }else{
+          nav.classList.remove('add-about');
+          }
+      });
+      window.addEventListener('scroll', (e) =>{
+          const nav = document.querySelector('.project');
+          if(window.pageYOffset>0) {
+          nav.classList.add('add-project');
+
+          }else{
+          nav.classList.remove('add-project');
+          }
+      });
+      window.addEventListener('scroll', (e) =>{
+          const nav = document.querySelector('.lang-exp');
+          if(window.pageYOffset>0) {
+          nav.classList.add('add-lang');
+
+          }else{
+          nav.classList.remove('add-lang');
+          }
+      });
+      window.addEventListener('scroll', (e) =>{
+          const nav = document.querySelector('.account');
+          if(window.pageYOffset>0) {
+          nav.classList.add('add-acc');
+
+          }else{
+          nav.classList.remove('add-acc');
+          }
+      });
+
+      const buttonRight = document.getElementById('slideRight');
+    const buttonLeft = document.getElementById('slideLeft');
+
+    buttonRight.onclick = function () {
+      document.getElementById('scrollmenu').scrollLeft += 20;
+    };
+
+    buttonRight.onmousedown = function () {
+      document.getElementById('scrollmenu').scrollLeft += 200;
+    };
+
+    buttonLeft.onclick = function () {
+      document.getElementById('scrollmenu').scrollLeft -= 20;
+    };
+
+    buttonLeft.onmousedown = function () {
+      document.getElementById('scrollmenu').scrollLeft -= 200;
+    };
+
+      window.addEventListener('scroll', (e) =>{
+          const nav = document.querySelector('.log-out');
+          if(window.pageYOffset>0) {
+          nav.classList.add('add-log');
+
+          }else{
+          nav.classList.remove('add-log');
+          }
+      });
+      
+        </script>
+    <div id="home" class="homes">
+        <h2 id="title" class="title">Hello,&#128075;<h2 class="name"> I'm Lawrence Mishkin</h2></h2>
+         <div class="container-home">
+            <h3 class="intro">Welcome, I'm a self-taught web-developer in high school. I hope you find this journey to be a fun and interesting learning experience. If you'd like to reach out to me, go to the about page or email me with the button below!</h3>
+            <a href="#contact-me"><button id="contact-me" class="contact-me"><i class="fa fa-comments" aria-hidden="true"></i> Contact Me</button></a>
+            <a href="#about"><button id="about-page" class="about-page"><i class="fa fa-info-circle" aria-hidden="true"></i> About Page</button></a>
+        </div>
+            <img class="intro-photo" alt="image of computer" src="_460829f8-f1a5-4009-b744-9a46caa21990-removebg-preview.png">
+            <div class="spin-tri"></div>
+            <div class="rev-spin-tri"></div>
+            <div class="spin-tri1"></div>
+            <div class="rev-spin-tri2"></div>
+            <div class="extender">
+        </div>
+        </div>
+    </body>
+</html>
